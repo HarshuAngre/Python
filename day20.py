@@ -1,43 +1,40 @@
+"""import webbrowser
+
+url_lists = [
+    'http://www.python.org',
+    'https://www.linkedin.com/in/asabeneh/',
+    'https://github.com/Asabeneh',
+    'https://twitter.com/Asabeneh',
+]
+
+for url in url_lists:
+    webbrowser.open_new_tab(url)"""
+
+"""import requests
+
+url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt'
+
+response = requests.get(url)
+
+print(response)
+print(response.status_code)
+print(response.headers)
+print(response.text)
+
+import requests
+from collections import Counter
 import re
 
-"""with open(
-    'C:/Users/HarshuAngre/Downloads/romeo_and_juliet.txt',
-    'r',
-    encoding = 'utf-8'
-) as file:
-    text = file.read().lower()
+url = "https://www.gutenberg.org/files/1112/1112.txt"
 
+response = requests.get(url)
+text = response.text
 
-words = re.findall(r'\b[a-z]+\b',text)
+# Convert to lowercase and keep only words
+words = re.findall(r'\b[a-z]+\b', text.lower())
 
-word_count = {}
+# Count frequencies
+word_count = Counter(words)
 
-for word in words:
-    word_count[word] = word_count.get(word,0) + 1
-
-
-sorted_words = sorted(
-    word_count.items(),
-    key= lambda item:item[1],
-    reverse= True
-)
-
-print(sorted_words[:10])"""
-
-import csv
-
-count = 0
-
-with open(
-    'C:/Users/HarshuAngre/Downloads/hacker_news.csv',
-    'r',
-    encoding='utf-8'
-) as file:
-    reader = csv.reader(file)
-
-    for row in reader:
-        row_text = ''.join(row)
-        if 'python' in row_text.lower():
-            count += 1
-
-print(count)
+# Top 10 words
+print(word_count.most_common(10))"""
