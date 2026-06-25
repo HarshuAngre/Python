@@ -33,7 +33,7 @@ print("sum: ", statistic.sum())
 print("min: ", statistic.min())
 print("max: ", statistic.max())
 print("range: ", statistic.range())
-print("Mean: ", statistic.mean())"""
+print("Mean: ", statistic.mean())
 
 
 class PersonAccount:
@@ -82,4 +82,4 @@ person.add_expenses("Rent", 15000)
 person.add_expenses("Food", 6000)
 person.add_expenses("Internet", 1000)
 
-person.account_info()
+person.account_info()"""
